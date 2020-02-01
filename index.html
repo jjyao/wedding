@@ -1,49 +1,56 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html class="no-js">
 <head>
-    <title>Chudi & Jiajun's Wedding</title>
-    <meta charset="utf-8">
-    <meta name="description" content="We would like to invite you to our big day.">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#ffffff">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="stylesheet" href="css/normalize.min.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/jquery.fancybox.css">
-    <link rel="stylesheet" href="css/flexslider.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/queries.css">
-    <link rel="stylesheet" href="css/animate.min.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+  <title>Chudi & Jiajun's Wedding</title>
+  <meta charset="utf-8">
+  <meta name="description" content="We would like to invite you to our big day.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="stylesheet" href="css/normalize.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/jquery.fancybox.css">
+  <link rel="stylesheet" href="css/flexslider.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/queries.css">
+  <link rel="stylesheet" href="css/animate.min.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 </head>
 <body id="top">
 <section class="hero">
-    <section class="navigation">
-        <header>
-            <div class="header-content">
-                <div class="header-nav">
-                    <nav>
-                        <ul class="primary-nav">
-                            <li><a href="#intro">How we met</a></li>
-                            <li><a href="#event">Event</a></li>
-                            <li><a href="#photos">Photos</a></li>
-                            <li><a href="mailto:jeromeyjj@gmail.com">Feedback</a></li>
-                        </ul>
-                        <ul class="member-actions">
-                            <li><a href="#map" class="login">Venue</a></li>
-                            <li><a href="#rsvp" class="btn-white btn-small">RSVP</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="navicon">
-                    <a class="nav-toggle" href="#"><span></span></a>
-                </div>
-            </div>
-        </header>
-    </section>
+  <section class="navigation">
+    <header>
+      <div class="header-content">
+        <div class="header-nav">
+                  <nav>
+                      <ul class="primary-nav">
+                        <li data-translatable>
+                          <span><a href="#intro">How we met</a></span>
+                          <span><a href="#intro">罗曼史</a></span>
+                        </li>
+                          <li><a href="#event">Event</a></li>
+                          <li><a href="#photos">Photos</a></li>
+                          <li><a href="#map" class="login">Venue</a></li>
+                          <li><a href="#rsvp" class="btn-white btn-small">RSVP</a></li>
+                      </ul>
+                      <ul class="member-actions">
+                          <li><a href="mailto:jeromeyjj@gmail.com">Feedback</a></li>
+                        <li data-translatable>
+                          <span><a href="?lang=zh">中文</a></span>
+                          <span><a href="?lang=en">ENGLISH</a></span>
+                        </li>
+                      </ul>
+                  </nav>
+              </div>
+              <div class="navicon">
+                  <a class="nav-toggle" href="#"><span></span></a>
+              </div>
+          </div>
+      </header>
+  </section>
     <div class="container">
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
@@ -453,7 +460,7 @@
 <script src="js/vendor/bootstrap.min.js"></script>
 <script src="js/jquery.flexslider-min.js"></script>
 <script src="js/jquery.mb.YTPlayer.min.js"></script>
-<script src="node_modules/waypoints/lib/jquery.waypoints.min.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
 <script src="js/vendor/ouical.js"></script>
 <script src="js/scripts.js"></script>
 <script async defer
@@ -473,6 +480,20 @@
     })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
     ga('create', 'UA-46465113-4', 'auto');
     ga('send', 'pageview');
+</script>
+<script src="js/dom-i18n.min.js"></script>
+<script>
+  var i18n = domI18n({
+    selector: '[data-translatable]',
+    languages: ['en', 'zh'],
+    defaultLanguage: 'en'
+  });
+  var searchParams = new URLSearchParams(window.location.search);
+  if (searchParams.has('lang') && searchParams.get('lang') === 'zh') {
+    i18n.changeLanguage('zh');
+  } else {
+    i18n.changeLanguage('en');
+  }
 </script>
 </body>
 </html>
