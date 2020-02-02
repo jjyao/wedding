@@ -426,7 +426,7 @@ section .header {
 }
 
 .hero .hero-content {
-    padding-top: 40%
+    padding-top: 35%
 }
 
 .hero .hero-content img {
@@ -497,27 +497,32 @@ header ul.primary-nav li:last-child a {
     padding-right: 0px
 }
 
-header ul.member-actions li {
+header ul.actions-nav li {
     display: inline
 }
 
-header ul.member-actions li a {
+header ul.actions-nav li a {
     font-weight: bold;
-    color: #fff
+    color: #fff;
+    padding-right: 25px
 }
 
-header ul.member-actions li a:hover {
+header ul.actions-nav li a:hover {
     color: #e8ca6f
+}
+
+header ul.actions-nav li:last-child a {
+    padding-right: 0px
 }
 
 header .header-nav {
     display: inline-block
 }
 
-header .member-actions {
+header .actions-nav {
     position: absolute;
     right: 0;
-    top: 41px;
+    top: 50px;
     transition: all 300ms ease-in-out
 }
 
