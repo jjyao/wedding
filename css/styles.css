@@ -172,6 +172,10 @@ section .header {
     padding: 40px 0
 }
 
+#photos {
+		padding-bottom: 25px;
+}
+
 .section-border {
     border-bottom: 1px solid #E6E9EA
 }
