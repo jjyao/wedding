@@ -101,6 +101,10 @@
         padding-right: 0;
     }
 
+    nav ul.actions-nav li a {
+        padding-right: 0;
+    }
+
     nav .actions-nav {
         position: static;
         padding: 0;
@@ -295,9 +299,9 @@
     .hero .hero-content {
         padding-top: 110%;
     }
-    
-    .hero .hero-content img {
-        width: 65%;
+
+    .hero .hero-content p {
+		    font-size: 50px;
     }
 
     .hero .btn {
